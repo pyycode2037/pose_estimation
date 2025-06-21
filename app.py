@@ -104,7 +104,7 @@ def main():
                     results = pose.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                     if results.pose_landmarks:
                         mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-                    stframe.image(frame, channels="BGR", use_column_width=True)
+                    stframe.image(frame, channels="BGR", use_container_width=True)
             cap.release()
             os.unlink(tfile.name)
         # 釋放 MediaPipe 資源
